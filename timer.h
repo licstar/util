@@ -10,7 +10,6 @@
 
 double getTime(){
 #ifdef __linux__
-    return 1.0 * clock() / CLOCKS_PER_SEC;
     timeval tv;
     gettimeofday(&tv, 0);
     return tv.tv_sec + tv.tv_usec * 1e-6;
